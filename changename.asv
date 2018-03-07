@@ -1,0 +1,9 @@
+filename=dir('*.jpg');
+%那么第i个文件的文件名就可以表示为
+for i=1:length(filename)
+    A=imread(filename(i).name);
+    B=i;
+    imwrite(A,'i.jpg')%保存图像为文件
+end
+%文件数量为：
+length(filename)

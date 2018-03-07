@@ -1,0 +1,19 @@
+function [ labeledpic ] = Label( rgbpic, x,y,m,n )
+%Label 根据坐标和纵横长度在一副新图像上画红线
+%   x,y,n,m是可以从Findcar函数直接返回得到的参数
+labeledpic=double(rgbpic);
+a=floor(m/2);
+b=floor
+for i=x-n/2:x+n/2
+    labeledpic(y-m/2,i,3)=255;
+    labeledpic(y+m/2,i,3)=255;
+end
+for i=y-m/2:y+m/2
+    labeledpic(i,x-n/2,3)=255;
+    labeledpic(i,x+n/2,3)=255;
+end
+
+labeledpic=uint8(labeledpic);
+
+end
+
